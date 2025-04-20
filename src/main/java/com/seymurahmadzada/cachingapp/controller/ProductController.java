@@ -1,5 +1,7 @@
 package com.seymurahmadzada.cachingapp.controller;
 
+import com.seymurahmadzada.cachingapp.model.entity.Product;
+import com.seymurahmadzada.cachingapp.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,7 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Product getProduct(@PathVariable Long id) {
+
         return productService.getProductById(id);
     }
 
